@@ -37,7 +37,7 @@ app.use('/api/request', requestRoute)
 async function start() {
     try {
         await mongoose.connect(
-            `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.ndjgyp4.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,
+            `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.ndjgyp4.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true },
         )
 
 
